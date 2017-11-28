@@ -19,11 +19,6 @@ Route::get('/services', 'PagesController@services');
 
 Route::resource('posts', 'PostsController');
 
-/*
-Route::get('/users/{id}/{name}', function($id, $name) {
-    return 'This is user ' . $name . ' with id: ' . $id;
-});
-*/
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
