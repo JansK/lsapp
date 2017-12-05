@@ -5,16 +5,15 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
+                <div class="panel-heading">View Your Posts</div>
                 <div class="panel-body">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="/posts/create" class="btn btn-primary">Create Post</a>
-                    <h3>Your Posts</h3>
+                    <a href="/posts/create" class="btn btn-primary">Create a Post</a>
+                    <h3>Your Posts...</h3>
                     @if(count($posts) > 0)
                         <table class="table table-striped">
                             <tr>
@@ -37,7 +36,7 @@
                             @endforeach
                         </table>
                     @else
-                        <p>You have no posts</p>
+                        <p>You have no posts... :(</p>
                     @endif
                 </div>
             </div>
